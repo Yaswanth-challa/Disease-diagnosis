@@ -1,0 +1,54 @@
+<!-- templates/results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Results - Privacy-Preserving Diagnosis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Edge Medical Diagnosis</h1>
+        <p>Your diagnosis results</p>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="results-box">
+                <h2>Diagnosis Results</h2>
+                
+                <div class="result-item">
+                    <h3>Potential Condition:</h3>
+                    <p class="diagnosis">{{ result.diagnosis }}</p>
+                </div>
+                
+                <div class="result-item">
+                    <h3>Confidence Level:</h3>
+                    <p class="probability">{{ result.probability }}</p>
+                </div>
+                
+                <div class="result-item">
+                    <h3>Recommendation:</h3>
+                    <p class="recommendation">{{ result.recommendation }}</p>
+                </div>
+                
+                <div class="disclaimer">
+                    <p><strong>Important:</strong> This is an automated assessment and not a substitute for professional medical advice. Please consult with a healthcare provider for proper diagnosis and treatment.</p>
+                </div>
+            </div>
+            
+            <div class="action-box">
+                <a href="{{ url_for('diagnosis') }}" class="btn">New Diagnosis</a>
+                <a href="{{ url_for('index') }}" class="btn-secondary">Home</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Privacy-Preserving Edge Diagnostics</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

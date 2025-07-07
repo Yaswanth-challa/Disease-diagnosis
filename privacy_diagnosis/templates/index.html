@@ -1,0 +1,36 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy-Preserving Medical Diagnosis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Edge Medical Diagnosis</h1>
+        <p>Privacy-preserving medical diagnostics on edge devices</p>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="info-box">
+                <h2>About This Service</h2>
+                <p>This application provides medical diagnosis while preserving your privacy through edge computing and data encryption.</p>
+                <p>Your sensitive health data remains encrypted throughout the diagnosis process.</p>
+            </div>
+            
+            <div class="action-box">
+                <a href="{{ url_for('diagnosis') }}" class="btn">Start Diagnosis</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Privacy-Preserving Edge Diagnostics</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
